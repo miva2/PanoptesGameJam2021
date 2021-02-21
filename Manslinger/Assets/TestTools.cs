@@ -16,8 +16,14 @@ public class TestTools : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //when pressing space button
-        Instantiate(prefabToInstantiate, positionToInstantiate.position, Quaternion.identity);
-       
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Instantiate(prefabToInstantiate, positionToInstantiate.position, Quaternion.identity);
+        }
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            Instantiate(prefabToInstantiate, positionToInstantiate.position, Quaternion.identity);
+        }
+
     }
 }
